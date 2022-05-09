@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slurm cloud scheduling on OpenStack</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+  </head>
+  <body>
+  <textarea id="source">
+
+class: center, middle
+
+# Slurm cloud scheduling on OpenStack
+
+Or how to dynamically start and stop slurm compute nodes on OpenStack
+
+Pablo Escobar Lopez
+
+sciCORE
+
+---
+
+# sciCOREMed
+
+- Secure IT environment for sensitive data analysis
+
+- Based on OpenStack private cloud
+
+- Projects are isolated from each other (OpenStack multitenancy) for improved security
+
+- Hardware resources for projects:
+
+    - 16 compute nodes 
+
+    - 848 cpus (with multithreading)
+
+    - ~ 4TB ram
+
+---
+
+## Project isolation in sciCOREMed (multitenancy)
+
+.center[![:scale 100%](img/multitenancy-try1.png)]
+
+---
+
+.center[
+![:scale 100%](img/end.gif)
+]
+
+
+
+  </textarea>
+  <script src="js/vendor/remark.min.js"></script>
+  <script src="js/vendor/jquery-3.2.1.min.js"></script>
+  <script src="js/terminal.language.js"></script>
+  <script src="js/common.js"></script>
+  </body>
+</html>
+
+# vim: filetype=markdown syntax=markdown tabstop=2 shiftwidth=2 expandtab
