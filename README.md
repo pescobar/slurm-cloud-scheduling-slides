@@ -1,1 +1,1 @@
-[github pages](https://pescobar.github.io/slurm-dynamic-slides/)
+[github pages](https://pescobar.github.io/slurm-cloud-scheduling-slides/)
