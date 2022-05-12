@@ -60,6 +60,28 @@ sciCORE
 
 ---
 
+# Possible solutions
+
+.small[
+ - Deploy static slurm in a shared tenant where every user from every project has access
+
+   - This is similar to how the regular sciCORE cluster works.
+
+   - Hardware resources in slurm are shared.
+
+   - Access control is done using file system permissions.
+
+   - It's less secure.
+
+   - Not using the fancy features provided by cloud environments ;)
+]
+.small[
+ - Buy more hardware so every tenant has a static slurm cluster
+
+   - Perfect solution. It's just expensive and less efficient (hardware is idle)
+]
+---
+
 .center[
 ![:scale 100%](img/end.gif)
 ]
