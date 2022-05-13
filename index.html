@@ -40,20 +40,17 @@ sciCORE
 
 ---
 
-## Project isolation in sciCOREMed (multitenancy)
-
-.center[![:scale 100%](img/multitenancy-try1.png)]
-
----
-
 # What problem we had?
 
+.center[![:scale 60%](img/multitenancy-try1.png)]
+
+.small[
 - When deploying "static" slurm clusters, compute nodes allocated in a tenant are not accessible from other tenants.
 
 - We had idle nodes in a tenant while other tenants were lacking resources.
 
 - Moving compute nodes between tenants required sysadmin intervention.
-
+]
 
 ---
 
