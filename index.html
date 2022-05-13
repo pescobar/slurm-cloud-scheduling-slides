@@ -110,19 +110,30 @@ sciCORE
 
 # Our implementation
 
-.small[
-
    - We extended our slurm ansible role to add support for cloud scheduling. https://github.com/scicore-unibas-ch/ansible-role-slurm/pull/4
-
 
    - Main development were these two python scripts used by slurm master to start/stop compute nodes using the OpenStack API:
        - https://github.com/scicore-unibas-ch/ansible-role-slurm/blob/master/templates/slurm_resume_openstack.py.j2
        - https://github.com/scicore-unibas-ch/ansible-role-slurm/blob/master/templates/slurm_suspend_openstack.py.j2
 
-
    - We also use slurm configless mode. https://slurm.schedmd.com/configless_slurm.html
 
-   - Feel free to contact me if you want more technical details. I am not allowed to go into geek mode in this presentation ;(
+---
+
+# Our implementation. Some technical details
+
+.small[
+- We create an OpenStack image to be used by the compute nodes. This image includes the required config (user accounts, NFS mounts, slurm config...etc)
+
+- We create an OpenStack "Application Credential" to be used by the slurm master to authenticate against the OpenStack API. Access to API is restricted to slurm master.
+
+- When a user submits a slurm job the slurm master contact the API and boots the required compute node(s).
+
+- When the compute node(s) boots it contacts the slurm master to get the latest slurm config (Slurm configless)
+
+- When the job finishes the slurm master contact the OpenStack API to shutdown the compute node and release the resources
+   
+- Feel free to contact me if you want more technical details. I should not go into geek mode in this presentation 🥲
 ]
 ---
 
