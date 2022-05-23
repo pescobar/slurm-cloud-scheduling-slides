@@ -95,17 +95,25 @@ sciCORE
 
 # How Slurm's cloud scheduling works
 
-.small[
    - Each project/tenant only has slurm master and slurm submit hosts running
 
-   .center[![:scale 40%](img/multitenancy-try1.png)]
+   .center[![:scale 80%](img/multitenancy-try1.png)]
 
-   - Users can see compute nodes available but those nodes are in fact not running (no resources allocated)
 
-   - When a user submits a job slurm master contacts the OpenStack API to boot the compute node on demand.
+---
 
-   - When the job finishes the compute node is stopped/deleted and resources released so they can be used by other tenants.
+# How Slurm's cloud scheduling works
+
+   .center[![:scale 50%](img/multitenancy-try1.png)]
+
+.small[
+- Users can see compute nodes available but those nodes are in fact not running (no resources allocated)
+
+- When a user submits a job slurm master contacts the OpenStack API to boot the compute node on demand.
+
+- When the job finishes the compute node is stopped/deleted and resources released so they can be used by other tenants.
 ]
+
 ---
 # How Slurm's cloud scheduling works
 
